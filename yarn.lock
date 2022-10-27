@@ -1323,7 +1323,7 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fullcalendar/common@~5.11.3":
+"@fullcalendar/common@~5.11.2", "@fullcalendar/common@~5.11.3":
   version "5.11.3"
   resolved "https://registry.npmjs.org/@fullcalendar/common/-/common-5.11.3.tgz#6d555a06925b8a6d1556570c9f039960539908d5"
   integrity sha512-welVwyfQOXQQGfDwBMSfYEPbiO1cPfUD+C7jd3ZoweJR+dSO11ddFugxIQ7dGfABAGZ63oq/+LW9FsmAJezVNg==
@@ -1347,12 +1347,28 @@
     "@fullcalendar/common" "~5.11.3"
     tslib "^2.1.0"
 
+"@fullcalendar/interaction@^5.11.3":
+  version "5.11.3"
+  resolved "https://registry.npmjs.org/@fullcalendar/interaction/-/interaction-5.11.3.tgz#c6712c1305ecb8e975953c7ff462222b49204187"
+  integrity sha512-L955wkDjza62K96ndstvYs2Fd4V0kayTDpqW8W7huFG3Ox8MutpLqKAa2SCaTvcNIlWS4oexGQRiQAaJG7u47A==
+  dependencies:
+    "@fullcalendar/common" "~5.11.3"
+    tslib "^2.1.0"
+
 "@fullcalendar/list@^5.11.3":
   version "5.11.3"
   resolved "https://registry.npmjs.org/@fullcalendar/list/-/list-5.11.3.tgz#113c98b6adecf0790107582ae3f3e33232a3068d"
   integrity sha512-6m9rJPzB5XfJZg+MlgVpha1cI3NUDeyV3GOmojJWZuti05NfDP4f0lzFUul8W7m1DQcjGS2UPRNE8HouA3guEA==
   dependencies:
     "@fullcalendar/common" "~5.11.3"
+    tslib "^2.1.0"
+
+"@fullcalendar/react@^5.11.2":
+  version "5.11.2"
+  resolved "https://registry.npmjs.org/@fullcalendar/react/-/react-5.11.2.tgz#019e6a0573d869c2a52f63426e13593857ee2d30"
+  integrity sha512-OnLvfV406VEQcK4QGN8xR4ro6Manp9dKE7/n9dhs19J1kKpqS1w1sIEYg1dT11njbk0Ob+TdF3cXLDFq73jUlA==
+  dependencies:
+    "@fullcalendar/common" "~5.11.2"
     tslib "^2.1.0"
 
 "@fullcalendar/timegrid@^5.11.3":
