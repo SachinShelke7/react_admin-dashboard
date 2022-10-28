@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, IconButton, useTheme } from "@mui/material";
+import React, { useState } from "react";
+import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 import { InputBase } from "@mui/material";
@@ -14,6 +14,11 @@ const Topbar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
+  const [menuToggle, setMenuToggle] = useState(false);
+
+  const handleUserPopup = () => {
+    setMenuToggle(!menuToggle);
+  };
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
       <Box
@@ -40,9 +45,30 @@ const Topbar = () => {
         <IconButton>
           <SettingsOutlinedIcon />
         </IconButton>
-        <IconButton>
-          <PersonOutlinedIcon />
-        </IconButton>
+        <Box position="relative">
+          <IconButton onClick={handleUserPopup}>
+            <PersonOutlinedIcon />
+          </IconButton>
+          {menuToggle ? (
+            <Box
+              width="300px"
+              position="absolute"
+              sx={{ top: "40px", right: "10px" }}
+              backgroundColor={colors.primary[500]}
+              border={`1px solid ${colors.primary[400]}`}
+              borderRadius="4px"
+              p="5px"
+            >
+              <Typography variant="h3">Admin</Typography>
+              <Typography>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                repellat quasi voluptates dolor libero temporibus animi magni
+                esse iure, repudiandae pariatur. Eum quibusdam laudantium, totam
+                alias maiores illum rerum saepe.
+              </Typography>
+            </Box>
+          ) : undefined}
+        </Box>
       </Box>
     </Box>
   );
