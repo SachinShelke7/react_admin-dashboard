@@ -69,7 +69,7 @@ const Sidebar = () => {
         }}
       >
         <ProSidebar collapsed={isCollapsed}>
-          <Menu iconShape="square">
+          <Menu>
             <MenuItem
               onClick={() => setIsCollapsed(!isCollapsed)}
               icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
@@ -96,7 +96,7 @@ const Sidebar = () => {
             </MenuItem>
             {!isCollapsed && (
               <Box mb="25px">
-                <Box display="flex" justifyContent="center" alignItem="center">
+                <Box display="flex" justifyContent="center" alignItems="center">
                   <img
                     alt="profile-user"
                     width="100px"
@@ -119,7 +119,7 @@ const Sidebar = () => {
                     Sachin
                   </Typography>
                   <Typography variant="h5" color={colors.greenAccent[500]}>
-                    VP Admin
+                    Super Admin
                   </Typography>
                 </Box>
               </Box>
