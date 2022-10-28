@@ -45,7 +45,7 @@ const Calender = () => {
     }
   };
   return (
-    <Box>
+    <Box m="20px">
       <Header title="CALENDAR" subtitle="Full Calender Interactive Page" />
 
       <Box display="flex" justifyContent="space-between">

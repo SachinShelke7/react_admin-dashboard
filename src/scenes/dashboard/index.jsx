@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 
 const index = () => {
   return (
-    <Box>
+    <Box m="20px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
       </Box>
