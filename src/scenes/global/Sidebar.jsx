@@ -8,18 +8,20 @@ import {
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
-import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
-import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
-import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import {
+  HomeOutlined,
+  PeopleOutlined,
+  ContactsOutlined,
+  ReceiptOutlined,
+  PersonOutlined,
+  CalendarTodayOutlined,
+  HelpOutlineOutlined,
+  BarChartOutlined,
+  PieChartOutlineOutlined,
+  TimelineOutlined,
+  MenuOutlined,
+  MapOutlined,
+} from "@mui/icons-material";
 import { padding } from "@mui/system";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -72,7 +74,7 @@ const Sidebar = () => {
           <Menu>
             <MenuItem
               onClick={() => setIsCollapsed(!isCollapsed)}
-              icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
+              icon={isCollapsed ? <MenuOutlined /> : undefined}
               style={{
                 margin: "10px 0 20px 0",
                 color: colors.grey[100],
@@ -89,7 +91,7 @@ const Sidebar = () => {
                     ADMINS
                   </Typography>
                   <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                    <MenuOutlinedIcon />
+                    <MenuOutlined />
                   </IconButton>
                 </Box>
               )}
@@ -129,7 +131,7 @@ const Sidebar = () => {
               <Item
                 title="Dashboard"
                 to="/"
-                icon={<HomeOutlinedIcon />}
+                icon={<HomeOutlined />}
                 selected={selected}
                 setSelected={setSelected}
               />
@@ -143,21 +145,21 @@ const Sidebar = () => {
               <Item
                 title="Manage Team"
                 to="/team"
-                icon={<PeopleOutlinedIcon />}
+                icon={<PeopleOutlined />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Contacts Information"
                 to="/contacts"
-                icon={<ContactsOutlinedIcon />}
+                icon={<ContactsOutlined />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Invoices Balance"
                 to="/invoices"
-                icon={<ReceiptOutlinedIcon />}
+                icon={<ReceiptOutlined />}
                 selected={selected}
                 setSelected={setSelected}
               />
@@ -171,21 +173,21 @@ const Sidebar = () => {
               <Item
                 title="Profile Form"
                 to="/form"
-                icon={<PersonOutlinedIcon />}
+                icon={<PersonOutlined />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Calender"
                 to="/calender"
-                icon={<CalendarTodayOutlinedIcon />}
+                icon={<CalendarTodayOutlined />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="FAQ"
                 to="/faq"
-                icon={<HelpOutlineOutlinedIcon />}
+                icon={<HelpOutlineOutlined />}
                 selected={selected}
                 setSelected={setSelected}
               />
@@ -199,28 +201,28 @@ const Sidebar = () => {
               <Item
                 title="Bar Chart"
                 to="/bar"
-                icon={<BarChartOutlinedIcon />}
+                icon={<BarChartOutlined />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Pie Chart"
                 to="/pie"
-                icon={<PieChartOutlineOutlinedIcon />}
+                icon={<PieChartOutlineOutlined />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Line Chart"
                 to="/line"
-                icon={<TimelineOutlinedIcon />}
+                icon={<TimelineOutlined />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Geo Chart"
                 to="/geo"
-                icon={<MapOutlinedIcon />}
+                icon={<MapOutlined />}
                 selected={selected}
                 setSelected={setSelected}
               />
