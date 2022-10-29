@@ -18,6 +18,9 @@ const Topbar = () => {
 
   const handleUserPopup = () => {
     setMenuToggle(!menuToggle);
+    setTimeout(() => {
+      setMenuToggle(false);
+    }, 2000);
   };
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
@@ -58,6 +61,7 @@ const Topbar = () => {
               border={`1px solid ${colors.primary[400]}`}
               borderRadius="4px"
               p="5px"
+              zIndex="10"
             >
               <Typography variant="h3">Admin</Typography>
               <Typography>
