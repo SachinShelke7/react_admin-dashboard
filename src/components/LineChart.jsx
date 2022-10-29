@@ -3,7 +3,7 @@ import { ResponsiveLine } from "@nivo/line";
 import React from "react";
 import { mockLineData as data } from "../data/mockData";
 import { tokens } from "../theme";
-const LineChart = () => {
+const LineChart = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
@@ -54,7 +54,7 @@ const LineChart = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: "transportation",
+        legend: isDashboard ? undefined : "transportation",
         legendOffset: 36,
         legendPosition: "middle",
       }}
@@ -63,7 +63,7 @@ const LineChart = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: "count",
+        legend: isDashboard ? undefined : "count",
         legendOffset: -40,
         legendPosition: "middle",
       }}
